@@ -104,7 +104,7 @@ static CFIndex WriteDataToStream(NSData* data, CFWriteStreamRef stream)
 {
     [req setValue:@"XMLHttpRequest" forHTTPHeaderField:@"X-Requested-With"];
     [self.webViewEngine evaluateJavaScript:@"navigator.userAgent" completionHandler:^(NSString* userAgent, NSError* error) {
-        [req setValue:userAgent forHTTPHeaderField:@"User-Agent"];
+        //[req setValue:userAgent forHTTPHeaderField:@"User-Agent"];
 
         for (NSString* headerName in headers) {
             id value = [headers objectForKey:headerName];
